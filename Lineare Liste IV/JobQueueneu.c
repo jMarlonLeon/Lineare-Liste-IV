@@ -21,14 +21,15 @@ int pushJQ(JobQueue_t* pJQ, Job_t* pJob) {
     
     if (pJQ->first == NULL) { pJQ->first = new_node; pJQ->last = new_node; pJQ->count++;
         
-        return 0;
+        return 0;       //Wenn JobQueue leer ist, Zeiger first und last von JobQueue auf new_node setzen
         
     }
     
-    QueueEL_t* temp = pJQ->first;
-    QueueEL_t* prev = NULL;
+    QueueEL_t* temp = pJQ->first;       // Neues temp Element als first festlegen
+    QueueEL_t* prev = NULL;             // Neues prev Element mit NULL initialisieren
     
-    while (temp != NULL && temp->job.priority >= pJob->priority) {
+    while (temp != NULL && temp->job.priority >= pJob->priority)            // Nach job-> priority sortieren ("einfügen")
+    {
 
         prev = temp;
 
