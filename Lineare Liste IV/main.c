@@ -37,22 +37,22 @@ int main(int argc, const char * argv[]) {
     
     pushJQ(&jobQueue_2,  &Job_5);
     
-    printf("JobQueue 1: \n");
+    printf("\n JobQueue 1: \n");
     // Ausgeben des Inhalts unserer Queue mithilfe der von uns implementierten Funkion 'printJQ(''&''JobQueue')'
     printJQ(&jobQueue_1);
     
-    printf("JobQueue 2: \n");
+    printf("\n JobQueue 2: \n");
     // Ausgeben des Inhalts unserer Queue mithilfe der von uns implementierten Funkion 'printJQ(''&''JobQueue')'
     printJQ(&jobQueue_2);
     
     
     // Herauslösen eines Elements aus einer JobQueue mithilfe der von uns implementierten Funktion Job_x = 'popJq(''&''JobQueue'')'
-    printf("Element Job_3 (Zähne putzen) aus JobQueue1 geloescht: \n");
+    printf("\n Element Job_3 (Zähne putzen) aus JobQueue1 geloescht: \n");
     Job_3 = popJQ(&jobQueue_1);
     // Überprüfung der Operation popJQ für Job_3 mihilfe der Ausgabe der Funktion "printJQ)"
     printJQ(&jobQueue_1);
     
-    printf("Elemente JobQueue1: \n");
+    printf("\n Elemente JobQueue1: \n");
     // Ausgabe der Anzahle der Elemente in jobQueue_1
     printf("%d", jobQueue_1.count);
     
