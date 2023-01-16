@@ -74,7 +74,9 @@ Job_t popJQ(JobQueue_t* pJQ) {
     
     free(temp);
 
-    pJQ->count--; if(pJQ->first == NULL)
+    pJQ->count--;
+    
+    if(pJQ->first == NULL)
     {
     pJQ->last = NULL;
     }
