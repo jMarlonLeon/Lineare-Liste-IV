@@ -33,7 +33,9 @@ int pushJQ(JobQueue_t* pJQ, Job_t* pJob) {
 
         temp = temp->next; }
 
-    if (prev == NULL) { new_node->next = pJQ->first; pJQ->first = new_node;
+    if (prev == NULL) {
+        new_node->next = pJQ->first;
+        pJQ->first = new_node;
         
     } else
     {
