@@ -11,9 +11,7 @@
 
 int pushJQ(JobQueue_t* pJQ, Job_t* pJob) {
     
-    QueueEL_t* new_node = (QueueEL_t*)      // Neues Element von Queue_EL_t 'erstellen'
-    
-    malloc(sizeof(QueueEL_t));              // Speicher auf dem Heap reservieren
+    QueueEL_t* new_node = (QueueEL_t*) malloc(sizeof(QueueEL_t));
     
     new_node->job = *pJob;                  // Jobelement des QueueEl_t auf das uebergebene Element *pJob festlgen
     
