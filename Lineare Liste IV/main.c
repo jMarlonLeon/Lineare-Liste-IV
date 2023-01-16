@@ -54,7 +54,7 @@ int main(int argc, const char * argv[]) {
     
     printf("\n Elemente JobQueue1: \n");
     // Ausgabe der Anzahle der Elemente in jobQueue_1
-    printf("%d", jobQueue_1.count);
+    printf("\n %d", jobQueue_1.count);
     
 }
 
