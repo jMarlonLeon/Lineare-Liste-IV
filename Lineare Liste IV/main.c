@@ -13,8 +13,8 @@
 int main(int argc, const char * argv[]) {
     //zwei leere Queues vom Typ JobQueue_t definieren
     
-    JobQueue_t jobQueue_1 = { 0 };
-    JobQueue_t jobQueue_2 = { 0 };
+    JobQueue_t jobQueue_1 = { "Queue1", 0 };
+    JobQueue_t jobQueue_2 = { "Queue2", 0 };
     
     // 5 neue Jobs (also Job- Objekte erstellen)
     
@@ -37,11 +37,11 @@ int main(int argc, const char * argv[]) {
     
     pushJQ(&jobQueue_2,  &Job_5);
     
-    printf("\n JobQueue 1: \n");
+
     // Ausgeben des Inhalts unserer Queue mithilfe der von uns implementierten Funkion 'printJQ(''&''JobQueue')'
     printJQ(&jobQueue_1);
     
-    printf("\n JobQueue 2: \n");
+  
     // Ausgeben des Inhalts unserer Queue mithilfe der von uns implementierten Funkion 'printJQ(''&''JobQueue')'
     printJQ(&jobQueue_2);
     

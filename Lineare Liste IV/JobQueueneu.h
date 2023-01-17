@@ -28,6 +28,7 @@ typedef struct QueueEL {
 
 typedef struct {
     
+    char name[100];
     QueueEL_t* first;
     QueueEL_t* last;
     int count;

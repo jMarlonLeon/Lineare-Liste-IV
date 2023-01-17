@@ -89,8 +89,12 @@ Job_t popJQ(JobQueue_t* pJQ) {
 }
 
 
-void printJQ(JobQueue_t* pJQ) { QueueEL_t* temp = pJQ->first; while (temp != NULL) {
+void printJQ(JobQueue_t* pJQ) {
+    QueueEL_t* temp = pJQ->first;
+    printf("Name: %s \n", pJQ->name );
+    while (temp != NULL) {
     
+   
     printf("Priority: %d, Description: %s\n", temp ->job.priority, temp ->job.description);
     
     temp = temp->next;
