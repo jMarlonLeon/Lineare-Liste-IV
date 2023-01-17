@@ -61,6 +61,5 @@ int main(int argc, const char * argv[]) {
     printf("\n%d \n", jobQueue_1.count);
     
     saveJQ(&jobQueue_1);
-    saveJQ(&jobQueue_2);
 }
 
