@@ -92,6 +92,7 @@ Job_t popJQ(JobQueue_t* pJQ) {
 void printJQ(JobQueue_t* pJQ) {
     QueueEL_t* temp = pJQ->first;
     printf("\nName: %s \n", pJQ->name );
+    
     while (temp != NULL) {
         
         
@@ -110,12 +111,14 @@ void saveJQ(JobQueue_t * pJQ){
     fp = fopen("/Users/marlonjuntorius/Desktop/Queue.txt", "w");
 
     if(fp == NULL) {
+        
         printf("Datei konnte nicht geoeffnet werden.\n");
         
     }
     else {
         
         fprintf(fp,"\nName: %s \n", pJQ->name );
+        
         while (temp != NULL) {
             
             
