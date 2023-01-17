@@ -23,6 +23,7 @@ int main(int argc, const char * argv[]) {
     Job_t Job_3 = {20, "Zähne putzen"};
     Job_t Job_4 = {30, "Schlafen"};
     Job_t Job_5 = {100, "Lernen"};
+    Job_t ReturnJob = {0,""};
     
     
     // Job- Objekte in die JobQueue_q laden via unserer PushJQ- funktion
@@ -48,10 +49,11 @@ int main(int argc, const char * argv[]) {
     
     // Herauslösen eines Elements aus einer JobQueue mithilfe der von uns implementierten Funktion Job_x = 'popJq(''&''JobQueue'')'
     
-    printf("\nElement Job_3 (Zähne putzen) aus JobQueue1 geloescht: \n");
-    Job_3 = popJQ(&jobQueue_1);
+
+    ReturnJob = popJQ(&jobQueue_1);
+    printf("\nElement (%s)  aus JobQueue1 geloescht: \n", ReturnJob.description);
     // Überprüfung der Operation popJQ für Job_3 mihilfe der Ausgabe der Funktion "printJQ)"
-    printf("%d, %s \n", Job_3.priority, Job_3.description );
+    printf("%d, %s \n", ReturnJob.priority, ReturnJob.description );
     
     printf("\nElemente JobQueue1:");
     // Ausgabe der Anzahle der Elemente in jobQueue_1
