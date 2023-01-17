@@ -104,8 +104,7 @@ void printJQ(JobQueue_t* pJQ) {
 }
 
 void saveJQ(JobQueue_t * pJQ){
-    FILE *fp;
-    int i;
+    FILE *fp
     QueueEL_t* temp = pJQ->first;
 
     fp = fopen("/Users/marlonjuntorius/Desktop/Queue.txt", "w");
