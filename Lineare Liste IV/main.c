@@ -60,5 +60,7 @@ int main(int argc, const char * argv[]) {
     // Ausgabe der Anzahle der Elemente in jobQueue_1
     printf("\n%d \n", jobQueue_1.count);
     
+    saveJQ(&jobQueue_1);
+    saveJQ(&jobQueue_2);
 }
 

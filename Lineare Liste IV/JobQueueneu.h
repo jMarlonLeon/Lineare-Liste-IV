@@ -42,5 +42,7 @@ Job_t popJQ (JobQueue_t *pJQ);
 
 void printJQ (JobQueue_t *pJQ);
 
+void saveJQ (JobQueue_t *pJQ);
+
 
 #endif /* JobQueueneu_h */

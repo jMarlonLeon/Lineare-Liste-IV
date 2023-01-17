@@ -93,11 +93,43 @@ void printJQ(JobQueue_t* pJQ) {
     QueueEL_t* temp = pJQ->first;
     printf("\nName: %s \n", pJQ->name );
     while (temp != NULL) {
-    
-   
-    printf("Priority: %d, Description: %s\n", temp ->job.priority, temp ->job.description);
-    
-    temp = temp->next;
-    
+        
+        
+        printf("Priority: %d, Description: %s\n", temp ->job.priority, temp ->job.description);
+        
+        temp = temp->next;
+        
+    }
 }
+
+void saveJQ(JobQueue_t * pJQ){
+    FILE *fp;
+    int i;
+    QueueEL_t* temp = pJQ->first;
+
+    fp = fopen("/Users/marlonjuntorius/Desktop/Queue.txt", "w");
+
+    if(fp == NULL) {
+        printf("Datei konnte nicht geoeffnet werden.\n");
+        
+    }
+    else {
+        
+        fprintf(fp,"\nName: %s \n", pJQ->name );
+        while (temp != NULL) {
+            
+            
+            fprintf(fp,"Priority: %d, Description: %s\n", temp ->job.priority, temp ->job.description);
+            
+            temp = temp->next;
+            
+        }
+    }
+        printf("\nQueue %s wurde gespeichert.\n", pJQ->name);
+    fclose(fp);
 }
+    
+    
+
+    
+
