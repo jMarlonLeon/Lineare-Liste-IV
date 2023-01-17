@@ -60,7 +60,9 @@ int pushJQ(JobQueue_t* pJQ, Job_t* pJob) {
 
 Job_t popJQ(JobQueue_t* pJQ) {
 
-    if (pJQ->first == NULL) { Job_t empty = {0, ""};
+    if (pJQ->first == NULL) {
+        
+        Job_t empty = {0, ""};
 
         return empty;
         
