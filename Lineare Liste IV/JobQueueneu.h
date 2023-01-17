@@ -40,7 +40,6 @@ int pushJQ (JobQueue_t *pJQ, Job_t *pJob);
 
 Job_t popJQ (JobQueue_t *pJQ);
 
-void printJQ (JobQueue_t *pJQ);
 
 void saveJQ (JobQueue_t *pJQ);
 
