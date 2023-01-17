@@ -47,14 +47,15 @@ int main(int argc, const char * argv[]) {
     
     
     // Herauslösen eines Elements aus einer JobQueue mithilfe der von uns implementierten Funktion Job_x = 'popJq(''&''JobQueue'')'
-    printf("\n Element Job_3 (Zähne putzen) aus JobQueue1 geloescht: \n");
+    
+    printf("\nElement Job_3 (Zähne putzen) aus JobQueue1 geloescht: \n");
     Job_3 = popJQ(&jobQueue_1);
     // Überprüfung der Operation popJQ für Job_3 mihilfe der Ausgabe der Funktion "printJQ)"
-    printJQ(&jobQueue_1);
+    printf("%d, %s \n", Job_3.priority, Job_3.description );
     
-    printf("\n Elemente JobQueue1: \n");
+    printf("\nElemente JobQueue1:");
     // Ausgabe der Anzahle der Elemente in jobQueue_1
-    printf("\n %d", jobQueue_1.count);
+    printf("\n%d \n", jobQueue_1.count);
     
 }
 
