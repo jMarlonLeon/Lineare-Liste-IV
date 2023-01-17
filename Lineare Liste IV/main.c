@@ -23,6 +23,7 @@ int main(int argc, const char * argv[]) {
     Job_t Job_3 = {20, "Zähne putzen"};
     Job_t Job_4 = {30, "Schlafen"};
     Job_t Job_5 = {100, "Lernen"};
+    // ReturnJob als Variable zum speichern der Pop- Operation initialisieren.
     Job_t ReturnJob = {0,""};
     
     
