@@ -91,7 +91,7 @@ Job_t popJQ(JobQueue_t* pJQ) {
 
 void printJQ(JobQueue_t* pJQ) {
     QueueEL_t* temp = pJQ->first;
-    printf("Name: %s \n", pJQ->name );
+    printf("\nName: %s \n", pJQ->name );
     while (temp != NULL) {
     
    
